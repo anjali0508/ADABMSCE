@@ -1,13 +1,19 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-	//random_r();
+	
 	int n;
+	cout<<"Enter the number of elements you want";
 	std::cin>>n;
-	int arr[20];
+	long int arr[1000];
 	for(int i=0;i<n;i++){
-		arr[i]=rand()%100;
+		arr[i]=rand();
 	}
+	cout<<"The elements are"<<endl;
+	for(int i=0;i<n;i++){
+		cout<<arr[i]<<" ";
+	}
+	cout<<endl;
 	int max = arr[0];
 	for(int i=0;i<n;i++){
 		if(arr[i]>max){
