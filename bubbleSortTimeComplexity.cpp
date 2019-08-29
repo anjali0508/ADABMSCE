@@ -1,6 +1,7 @@
 #include<iostream>
 #include<algorithm>
 using namespace std;
+int comp = 0;
 int main(){
 	int n;
 	cout<<"Enter number of elements";
@@ -13,6 +14,7 @@ int main(){
 	for(int i=0;i<n-1;i++){
 		for(int j=0;j<n-1-i;j++){
 			if(arr[j]>arr[j+1]){
+				comp++;
 				swap(arr[j],arr[j+1]);
 			}
 		}
@@ -24,4 +26,5 @@ int main(){
 	}
 	cout<<endl;
 	cout<<"Time taken: "<<(double)(clock()- tStart)/CLOCKS_PER_SEC;
+	cout<<"The number of comparisions is: "<<comp; 
 }
